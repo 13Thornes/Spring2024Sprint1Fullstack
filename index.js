@@ -1,6 +1,7 @@
 global.DEBUG = true;
 
 const fs = require('fs');
+const { initializeApplication } = require('./init.js')
 
 const myArgs = process.argv.slice(2);
 
