@@ -1,0 +1,20 @@
+myapp <command> <option>
+
+Usage:
+
+myapp --help          displays help
+
+myapp init            initialize the app
+myapp init --mk       create all the app folders
+myapp init --cat      create all the app files
+myapp init --all      create all the folders and files
+
+myapp config          create or change the app configuration
+myapp config --show   show the contents of the config file
+myapp config --reset  reset back to default the config file
+myapp config --set    set a specific attribute of the config file
+
+myapp token           manage the user tokens
+myapp token --list    list all the tokens
+myapp token --count   provide a count of all the tokens
+myapp token --new     add a new token
