@@ -1,7 +1,8 @@
 global.DEBUG = true;
 
 const fs = require('fs');
-const { initializeApplication } = require('./init.js')
+const { initializeApplication } = require('./init.js');
+const { configApplication } = require('./config.js');
 
 const myArgs = process.argv.slice(2);
 
@@ -16,7 +17,7 @@ switch(myArgs[0]) {
     case 'config':
     case 'c':
       if (DEBUG) console.log(myArgs[0], '- create the config folders and files.');
-     //configApplication();
+     configApplication();
       break;
     case 'token':
     case 't':
