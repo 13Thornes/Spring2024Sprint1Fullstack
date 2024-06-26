@@ -3,6 +3,7 @@ global.DEBUG = true;
 const fs = require('fs');
 const { initializeApplication } = require('./init.js');
 const { configApplication } = require('./config.js');
+const { tokenApplication } = require('./token.js');
 
 const myArgs = process.argv.slice(2);
 
@@ -22,7 +23,7 @@ switch(myArgs[0]) {
     case 'token':
     case 't':
       if (DEBUG) console.log(myArgs[0], '- manage the tokens');
-      //tokenApplication();
+      tokenApplication();
       break;
     case '--help':
     case '--h':
