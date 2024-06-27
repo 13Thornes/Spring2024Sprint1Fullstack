@@ -117,7 +117,7 @@ function listTokens() {
 function tokenApplication() {
     if(DEBUG) console.log('tokenApplication()');
   
-    switch (myArgs[0]) {
+    switch (myArgs[1]) {
         case '--count':
             if(DEBUG) console.log('--count');
             displayTokens();
@@ -125,7 +125,7 @@ function tokenApplication() {
         case '--new':
             if(DEBUG) console.log('--new');
             if (myArgs[1]) {
-                newToken(myArgs[1]);
+                newToken(myArgs[2]);
             } else {
                 console.log('Please provide a username with --new <username>');
             }
@@ -136,18 +136,18 @@ function tokenApplication() {
             break;
         case '--upd':
             if(DEBUG) console.log('upd');
-            if (myArgs[1] === 'p' && myArgs[2] && myArgs[3]) {
-                updatePhone(myArgs[2], myArgs[3]);
-            } else if (myArgs[1] === 'e' && myArgs[2] && myArgs[3]) {
-                updateEmail(myArgs[2], myArgs[3]);
+            if (myArgs[2] === 'p' && myArgs[3] && myArgs[4]) {
+                updatePhone(myArgs[3], myArgs[4]);
+            } else if (myArgs[2] === 'e' && myArgs[3] && myArgs[4]) {
+                updateEmail(myArgs[3], myArgs[4]);
             } else {
                 console.log('Usage: myapp token upd -p <username> <phone number> OR myapp token upd -e <username> <email>');
             }
             break;
         case '--search':
             if(DEBUG) console.log('--search');
-            if (myArgs[1] && myArgs[2]) {
-                searchUser(myArgs[1], myArgs[2]);
+            if (myArgs[2] && myArgs[3]) {
+                searchUser(myArgs[2], myArgs[3]);
             } else {
                 console.log('Usage: myapp token --search u <username> OR myapp token --search p <phone> OR myapp token --search e <email>');
             }

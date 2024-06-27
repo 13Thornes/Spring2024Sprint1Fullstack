@@ -18,7 +18,7 @@ switch(myArgs[0]) {
     case 'config':
     case 'c':
       if (DEBUG) console.log(myArgs[0], '- create the config folders and files.');
-     configApplication();
+      configApplication();
       break;
     case 'token':
     case 't':
